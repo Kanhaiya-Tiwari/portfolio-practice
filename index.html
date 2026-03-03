@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kanhaaiya Tiwari | DevOps & Cloud Engineer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:linear-gradient(-45deg,#0f2027,#203a43,#2c5364,#000428);
+background-size:400% 400%;
+animation:gradientBG 12s ease infinite;
+color:white;
+overflow-x:hidden;
+}
+
+@keyframes gradientBG{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+section{
+padding:100px 10%;
+position:relative;
+z-index:2;
+}
+
+nav{
+position:fixed;
+width:100%;
+padding:20px 10%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(15px);
+border-bottom:1px solid rgba(255,255,255,0.2);
+z-index:1000;
+}
+
+nav h2{
+color:#00ffff;
+font-weight:800;
+}
+
+nav ul{
+display:flex;
+gap:30px;
+list-style:none;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+transition:0.4s;
+}
+
+nav ul li a:hover{
+color:#00ffff;
+transform:scale(1.1);
+}
+
+/* Glass Card */
+.glass{
+background:rgba(255,255,255,0.08);
+border-radius:20px;
+backdrop-filter:blur(20px);
+border:1px solid rgba(255,255,255,0.2);
+padding:40px;
+transition:0.4s ease;
+}
+
+.glass:hover{
+transform:translateY(-12px);
+box-shadow:0 20px 40px rgba(0,0,0,0.6);
+}
+
+/* HERO */
+.hero{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+flex-direction:column;
+}
+
+.hero h1{
+font-size:3.5rem;
+}
+
+.highlight{
+color:#00ffff;
+}
+
+.typing{
+margin-top:20px;
+font-size:1.3rem;
+height:30px;
+}
+
+.btn{
+margin-top:30px;
+display:inline-block;
+padding:14px 35px;
+border-radius:40px;
+background:linear-gradient(45deg,#00ffff,#0072ff);
+color:black;
+font-weight:700;
+text-decoration:none;
+transition:0.4s;
+}
+
+.btn:hover{
+transform:scale(1.1);
+box-shadow:0 0 25px #00ffff;
+}
+
+/* Grid */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+margin-top:50px;
+}
+
+/* Skills Bars */
+.skill{
+margin-bottom:25px;
+}
+
+.skill-name{
+margin-bottom:8px;
+}
+
+.skill-bar{
+background:rgba(255,255,255,0.2);
+border-radius:20px;
+overflow:hidden;
+}
+
+.skill-fill{
+height:10px;
+background:linear-gradient(90deg,#00ffff,#0072ff);
+width:0;
+transition:2s;
+}
+
+/* Timeline */
+.timeline{
+border-left:3px solid #00ffff;
+padding-left:30px;
+}
+
+.timeline-item{
+margin-bottom:30px;
+}
+
+/* Footer */
+footer{
+text-align:center;
+padding:40px;
+opacity:0.6;
+}
+
+/* Scroll Reveal */
+.hidden{
+opacity:0;
+transform:translateY(40px);
+transition:1s;
+}
+
+.show{
+opacity:1;
+transform:translateY(0);
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<h2>Kanha</h2>
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#roadmap">Roadmap</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<section class="hero">
+<h1>Hi, I'm <span class="highlight">Kanha</span></h1>
+<div class="typing" id="typing"></div>
+<a href="#projects" class="btn">Explore My Work</a>
+</section>
+
+<section id="about" class="hidden">
+<div class="glass">
+<h2>About Me</h2>
+<p>
+Final Year B.Tech CSE student from India.  
+Focused on becoming a DevOps & Cloud Engineer.  
+Currently mastering Linux, Docker, Kubernetes, CI/CD pipelines, and AWS fundamentals.  
+Building real-world infrastructure projects daily.  
+Goal: Work globally and build scalable cloud systems.
+</p>
+</div>
+</section>
+
+<section id="skills" class="hidden">
+<h2>Technical Skills</h2>
+<div class="glass">
+
+<div class="skill">
+<div class="skill-name">Linux Administration</div>
+<div class="skill-bar"><div class="skill-fill" data-width="90%"></div></div>
+</div>
+
+<div class="skill">
+<div class="skill-name">Docker & Docker Compose</div>
+<div class="skill-bar"><div class="skill-fill" data-width="85%"></div></div>
+</div>
+
+<div class="skill">
+<div class="skill-name">Kubernetes</div>
+<div class="skill-bar"><div class="skill-fill" data-width="75%"></div></div>
+</div>
+
+<div class="skill">
+<div class="skill-name">CI/CD (Jenkins & GitHub Actions)</div>
+<div class="skill-bar"><div class="skill-fill" data-width="80%"></div></div>
+</div>
+
+<div class="skill">
+<div class="skill-name">AWS & Cloud Basics</div>
+<div class="skill-bar"><div class="skill-fill" data-width="70%"></div></div>
+</div>
+
+</div>
+</section>
+
+<section id="projects" class="hidden">
+<h2>Projects</h2>
+<div class="grid">
+
+<div class="glass">
+<h3>Production Multi-Container App</h3>
+<p>Docker Compose app with database, volumes, networking & restart policies.</p>
+</div>
+
+<div class="glass">
+<h3>Kubernetes Cluster Deployment</h3>
+<p>Deployed scalable containerized app with Services, Deployments & Ingress.</p>
+</div>
+
+<div class="glass">
+<h3>CI/CD Automation Pipeline</h3>
+<p>GitHub → Jenkins → Docker → Deployment automation workflow.</p>
+</div>
+
+</div>
+</section>
+
+<section id="roadmap" class="hidden">
+<h2>My DevOps Journey</h2>
+<div class="glass timeline">
+
+<div class="timeline-item">
+<h4>2025</h4>
+<p>Mastered Linux fundamentals and system administration.</p>
+</div>
+
+<div class="timeline-item">
+<h4>2026</h4>
+<p>Advanced Docker, Kubernetes & CI/CD implementation projects.</p>
+</div>
+
+<div class="timeline-item">
+<h4>Next Goal</h4>
+<p>AWS certifications & Cloud-native production deployments.</p>
+</div>
+
+</div>
+</section>
+
+<section id="contact" class="hidden">
+<div class="glass">
+<h2>Contact Me</h2>
+<p>Email: your-email@example.com</p>
+<p>GitHub: github.com/yourusername</p>
+<p>LinkedIn: linkedin.com/in/yourprofile</p>
+</div>
+</section>
+
+<footer>
+© 2026 Kanha | DevOps & Cloud Engineer
+</footer>
+
+<script>
+
+/* Typing Effect */
+const textArray = [
+"DevOps Engineer Aspirant",
+"Cloud Infrastructure Learner",
+"Linux & Kubernetes Enthusiast",
+"Future Global Tech Professional"
+];
+
+let i = 0;
+let j = 0;
+let currentText = "";
+let isDeleting = false;
+const typingElement = document.getElementById("typing");
+
+function type(){
+if(i < textArray.length){
+if(!isDeleting && j <= textArray[i].length){
+currentText = textArray[i].substring(0,j++);
+typingElement.innerHTML = currentText;
+}
+if(isDeleting && j >= 0){
+currentText = textArray[i].substring(0,j--);
+typingElement.innerHTML = currentText;
+}
+if(j == textArray[i].length){
+isDeleting = true;
+setTimeout(type,1000);
+return;
+}
+if(isDeleting && j === 0){
+isDeleting = false;
+i++;
+if(i === textArray.length) i = 0;
+}
+}
+setTimeout(type,100);
+}
+type();
+
+/* Scroll Animation */
+const observer = new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("show");
+}
+});
+});
+
+document.querySelectorAll('.hidden').forEach(el=>observer.observe(el));
+
+/* Skill Animation */
+const skills = document.querySelectorAll('.skill-fill');
+window.addEventListener('scroll',()=>{
+skills.forEach(skill=>{
+const rect = skill.getBoundingClientRect();
+if(rect.top < window.innerHeight){
+skill.style.width = skill.getAttribute("data-width");
+}
+});
+});
+
+</script>
+
+</body>
+</html>
