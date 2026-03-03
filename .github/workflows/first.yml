@@ -3,7 +3,6 @@ name: Hello
 on:
   push:
     branches: [main]
-
 jobs:
 
   greet:
@@ -15,8 +14,8 @@ jobs:
 
       - name: say hello to others
         run: echo "hello $USER"
-
-   details:
+        
+  details:
      runs-on: ubuntu-latest
      steps:
        - name: i have create second workflow
