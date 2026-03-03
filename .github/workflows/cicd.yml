@@ -12,18 +12,21 @@ jobs:
         run: echo "code is checking"
 
   build:
+    needs: code
     runs-on: ubuntu-latest
     steps:
       - name: build Docker image
         run: echo "docker image building completed"
 
   test:
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: test the container
         run: echo "testing the container"
 
   deploy:
+    needs: test
     runs-on: ubuntu-22.04
     steps:
       - name: deploying the app
