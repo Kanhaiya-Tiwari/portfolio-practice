@@ -15,4 +15,10 @@ jobs:
 
       - name: say hello to others
         run: echo "hello $USER"
+
+   details:
+     runs-on: ubuntu-latest
+     steps:
+       - name: i have create second workflow
+       - run: echo " you created your second workflow"
        
